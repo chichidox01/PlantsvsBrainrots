@@ -1,548 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="https://i.ibb.co/C3PKJHCg/Site-logo.png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Plants vs Brainrots </title>
-
-  <meta property="og:image" content="https://tr.rbxcdn.com/180DAY-df903aa307ddb0830246271075605cec/256/256/Image/Webp/noFilter"/>
-  <meta property="og:type" content="website"/>
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lib-devtools/plantsvsbrainrots@main/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <!-- Safe jQuery script from original file -->
-  <script src="https://cdn.jsdelivr.net/gh/lib-devtools/ajax.libs.jquery@main/3.6.3.min.js"></script>
-  
-  <!-- Removed suspicious meta tags -->
-</head>
-<body>
-  <video class="bg-video" autoplay muted loop playsinline>
-    <source src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/back.mp4" type="video/mp4">
-  </video>
-  <div class="overlay"></div>
-  <div class="shop-container">
-    <div class="shop-header">
-      <span>New seeds in <span id="timer" class="countdown">20:13</span></span>
-      <div class="header-buttons">
-        <button class="restock-btn" onclick="goBack()">Restock</button>
-        <button class="close-btn" onclick="goBack()">X</button>
-      </div>
-    </div>
-
-    <!-- CARDS WRAPPER (from original file) -->
-    <div class="cards-wrapper" id="cardsWrapper">
-      <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/cactus1.png" alt="Cactus Seed - Plants vs Brainrots">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Cactus Seed</div>
-          <div class="rarity" id="coloredText">Rare</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Cactus Seed')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Cactus Seed')">FREE</span>
-            <span class="price-victor" onclick="openForm('Cactus Seed')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/strawberry1.png" alt="Strawberry Seed - Plants vs Brainrots">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Strawberry Seed</div>
-          <div class="rarity" id="coloredText">Rare</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Strawberry Seed')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Strawberry Seed')">FREE</span>
-            <span class="price-victor" onclick="openForm('Strawberry Seed')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/pumpkin1.png" alt="Pumpkin Seed - Plants vs Brainrots">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Pumpkin Seed</div>
-          <div class="rarity" id="coloredText">Epic</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Pumpkin Seed')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Pumpkin Seed')">FREE</span>
-            <span class="price-victor" onclick="openForm('Pumpkin Seed')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/sunflower1.png" alt="Sunflower Seed - Plants vs Brainrots">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Sunflower Seed</div>
-          <div class="rarity" id="coloredText">Epic</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Sunflower Seed')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Sunflower Seed')">FREE</span>
-            <span class="price-victor" onclick="openForm('Sunflower Seed')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/dragonfruit1.png" alt="Dragon Fruit Seed - Plants vs Brainrots">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Dragon Fruits Seed</div>
-          <div class="rarity" id="coloredText">Legendary</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Dragon Fruits Seed')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Dragon Fruits Seed')">FREE</span>
-            <span class="price-victor" onclick="openForm('Dragon Fruits Seed')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/eggplant1.png" alt="Eggplant Seed - Plants vs Brainrots">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Eggplant Seed</div>
-          <div class="rarity" id="coloredText">Legendary</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Eggplant Seed')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Eggplant Seed')">FREE</span>
-            <span class="price-victor" onclick="openForm('Eggplant Seed')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/watermelon1.png" alt="Watermelon Seed - Plants vs Brainrots">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Watermelon Seed</div>
-          <div class="rarity" id="coloredText">Mythic</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Watermelon Seed')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Watermelon Seed')">FREE</span>
-            <span class="price-victor" onclick="openForm('Watermelon Seed')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-        <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/grape1.png" alt="Grape Seed - Plants vs Brainrots">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Grape Seed</div>
-          <div class="rarity" id="coloredText">Mythic</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Grape Seed')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Grape Seed')">FREE</span>
-            <span class="price-victor" onclick="openForm('Grape Seed')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/cocotank1.png" alt="Cocotank Seed - Plants vs Brainrots">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Cocotank Seed</div>
-          <div class="rarity" id="coloredText">Godly</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Cocotank Seed')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Cocotank Seed')">FREE</span>
-            <span class="price-victor" onclick="openForm('Cocotank Seed')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/carnivorousplant1.png" alt="Carnivorous Plant Seed - Plants vs Brainrots">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Carnivorous Plant</div>
-          <div class="rarity" id="coloredText">Godly</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Carnivorous Plant')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Carnivorous Plant')">FREE</span>
-            <span class="price-victor" onclick="openForm('Carnivorous Plant')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/MrCarrotseed.png" alt="Mr Carrot Seed - Plants vs Brainrots">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Mr Carrot Seed</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Mr Carrot Seed')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Mr Carrot Seed')">FREE</span>
-            <span class="price-victor" onclick="openForm('Mr Carrot Seed')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/tomatriose1.png" alt="Tomatrio Seed - Plants vs Brainrots">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Tomatrio Seed</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Tomatrio Seed')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Tomatrio Seed')">FREE</span>
-            <span class="price-victor" onclick="openForm('Tomatrio Seed')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-
-       <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/shroombino1.png" alt="Shroombino Seed - Plants vs Brainrots">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Shroombino Seed</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Shroombino Seed')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Shroombino Seed')">FREE</span>
-            <span class="price-victor" onclick="openForm('Shroombino Seed')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-        <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/mangos.webp" style="width:80px; height:80px;" alt="Mango Seed - Plants vs Brainrots">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Mango Seed</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Mango Seed')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Mango Seed')">FREE</span>
-            <span class="price-victor" onclick="openForm('Mango Seed')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/pvsb@main/king-limone.webp" style="width:80px; height:80px;" alt="King Limone Seed - Plants vs Brainrots">
-        </div>
-        <div class="card-info">
-          <div class="card-title">King Limone Seed</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('King Limone Seed')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('King Limone Seed')">FREE</span>
-            <span class="price-victor" onclick="openForm('King Limone Seed')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift Icon" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Rewards - Claim Free Items</title>
     
-    <!-- FORM WRAPPER (from original file) -->
-    <div class="form-wrapper" id="formWrapper" style="display: none;"> <!-- Hidden by default -->
-      <h2 id="chosenItemTitle">enter your username exactly as shown in the game!</h2>
-      <div class="input-section">
-        <input type="text" id="usernameInput" placeholder="Enter Username"> <!-- Added ID -->
-        <div id="search">SEARCH</div>
-      </div>
-      <div class="loading-gif d-none">
-        <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/loading.gif" alt="Loading animation">
-      </div>
-      <div class="profile d-none" style="position: relative; padding: 20px;">
-        <div class="img"><img src="" alt="Avatar" id="avatarImg"></div> <!-- Added ID -->
-        <div class="welcome-text"></div>
-        <div class="continue-btn" id="continueBtn">CLAIM SEEDS</div>
-        <div class="instruction-text d-none" style="background:white; padding:10px; margin-top:10px; border-radius:5px; font-weight:bold; font-size:18px;">
-          <div class="msg msg1" style="display:none; color:green;">Verifying...</div>
-          <div class="msg msg2" style="display:none; color:green;">Sending seeds...</div>
-          <div class="msg msg3" style="display:none; color:red;">An error occurred</div>
-          <div class="msg msg4" style="display:none; color:red;">Manual verification required</div>
-        </div>
-        <div id="welcome-text-template" class="d-none">
-          Hello @<span class="user-placeholder"></span>, you will receive <span class="item-placeholder"></span> once you click the button below.
-        </div>
-      </div>
-    </div>
-  </div> 
-  
-  <!-- REMOVED MALICIOUS SCRIPTS -->
-  
-  <!-- NEW SAFE SCRIPT -->
-  <script>
-    let currentItemName = '';
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- React & ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    
+    <!-- Babel for JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    // This function shows YOUR link in an iframe
-    function showLocker() {
-      // Create an overlay background
-      var overlay = document.createElement("div");
-      overlay.id = "lockerOverlay"; 
-      overlay.style.position = "fixed";
-      overlay.style.top = "0";
-      overlay.style.left = "0";
-      overlay.style.width = "100%";
-      overlay.style.height = "100%";
-      overlay.style.backgroundColor = "rgba(0,0,0,0.8)";
-      overlay.style.zIndex = "9998";
-      document.body.appendChild(overlay);
+    <!-- Google Fonts (Optional but recommended) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 
-      // Create an iframe for the locker page
-      var iframe = document.createElement("iframe");
-      iframe.id = "lockerIframe";
-      
-      // --- THIS IS YOUR NEW LINK ---
-      iframe.src = "https://execmods.com/cl/i/82drvr"; 
-      
-      iframe.style.position = "fixed";
-      iframe.style.top = "50%";
-      iframe.style.left = "50%";
-      iframe.style.transform = "translate(-50%, -50%)";
-      iframe.style.width = "90%";
-      iframe.style.height = "90%";
-      iframe.style.maxWidth = "800px";
-      iframe.style.maxHeight = "700px";
-      iframe.style.border = "none";
-      iframe.style.borderRadius = "12px";
-      iframe.style.zIndex = "9999";
-      iframe.style.background = "white";
-      document.body.appendChild(iframe);
-
-      // Close the locker when clicking the overlay
-      overlay.addEventListener("click", function() {
-        if (document.getElementById('lockerIframe')) {
-          iframe.remove();
-        }
-        if (document.getElementById('lockerOverlay')) {
-          overlay.remove();
-        }
-      });
-    }
-
-    // Function to show the username form
-    function openForm(itemName) {
-      currentItemName = itemName;
-      $('#cardsWrapper').hide();
-      $('#formWrapper').show();
-      $('#chosenItemTitle').text(`Claiming ${itemName}`);
-      
-      // Reset form
-      $('#chosenItemTitle').show(); // <-- ADD THIS
-      $('.input-section').show(); // <-- ADD THIS
-      $('.profile').addClass('d-none');
-      $('.loading-gif').addClass('d-none');
-      $('.instruction-text').addClass('d-none');
-      $('#usernameInput').val('');
-    }
-
-    // Function to go back to cards
-    function goBack() {
-      $('#formWrapper').hide();
-      $('#cardsWrapper').show();
-    }
-
-    // Wait for the document to be ready
-    $(document).ready(function() {
-
-      // --- FIXED: Defined showProfile function here ---
-      function showProfile(imageUrl) {
-        const username = $('#usernameInput').val();
-
-        // Hide loading, title, and input
-        $('.loading-gif').addClass('d-none');
-        $('#chosenItemTitle').hide(); 
-        $('.input-section').hide();
-
-        // Show profile
-        $('.profile').removeClass('d-none');
+    <style>
+        body { font-family: 'Inter', sans-serif; }
         
-        // Set avatar
-        $('#avatarImg').attr('src', imageUrl);
+        /* Custom Animation Keyframes since we aren't using the tailwind-animate plugin */
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes zoomIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
-        // Set welcome text
-        const template = $('#welcome-text-template').html();
-        const newWelcomeText = template
-          .replace('@<span class="user-placeholder"></span>', `@${username}`)
-          .replace('<span class="item-placeholder"></span>', currentItemName);
-        $('.welcome-text').html(newWelcomeText);
-      }
-      // --- END OF FIX ---
+        .animate-in { animation: fadeIn 0.3s ease-out forwards; }
+        .zoom-in-95 { animation: zoomIn 0.3s ease-out forwards; }
+        .slide-in-from-bottom-4 { animation: slideUp 0.5s ease-out forwards; }
+    </style>
+</head>
+<body class="bg-[#0f172a] text-white">
 
-      // 1. Logic for "SEARCH" button
-      $('#search').on('click', function() {
-        const username = $('#usernameInput').val();
-        if (username.trim() === '') {
-          // You can add an error message here
-          return;
-        }
+    <div id="root"></div>
 
-        // Show loading and hide form
-        $('.loading-gif').removeClass('d-none');
-        $('#chosenItemTitle').hide();
-        $('.input-section').hide();
+    <script type="text/babel">
+        const { useState, useEffect } = React;
 
-        // --- REMOVED: Fallback function is no longer needed ---
-        /*
-        function showFallback() {
-            const fallbackImg = `https://placehold.co/100x100/eeeeee/333333?text=${username.charAt(0)}`;
-            showProfile(fallbackImg);
-        }
-        */
+        // --- ICON COMPONENTS (SVG Paths) ---
+        // We define these manually so you don't need an external library build step.
+        const Diamond = (props) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M2.7 10.3a2.41 2.41 0 0 0 0 3.41l7.59 7.59a2.41 2.41 0 0 0 3.41 0l7.59-7.59a2.41 2.41 0 0 0 0-3.41l-7.59-7.59a2.41 2.41 0 0 0-3.41 0Z"/></svg>
+        );
+        const Swords = (props) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"/><line x1="13" y1="19" x2="19" y2="13"/><line x1="16" y1="16" x2="20" y2="20"/><line x1="19" y1="21" x2="21" y2="19"/><polyline points="14.5 6.5 18 3 21 3 21 6 17.5 9.5"/><line x1="5" y1="14" x2="9" y2="18"/><line x1="7" y1="17" x2="4" y2="20"/><line x1="3" y1="19" x2="5" y2="21"/></svg>
+        );
+        const Users = (props) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        );
+        const Shield = (props) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        );
+        const Skull = (props) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/><path d="M8 20v2h8v-2"/><path d="M12.5 17l-.5-1-.5 1h1z"/><path d="M16 20a2 2 0 0 0 1.56-3.25 8 8 0 1 0-11.12 0A2 2 0 0 0 8 20"/></svg>
+        );
+        const Flame = (props) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-2.246-5.318 6-6.5 2.496 4.992-1.25 7.5-1.25 7.5a2.5 2.5 0 0 0 2.5 2.5c1.38 0 2-.5 3-1 2.143-1.072 5.318-2.246 6.5 6-4.996 2.492-7.5-1.25-7.5-1.25a2.5 2.5 0 0 0-2.5 2.5c0 1.38.5 2 1 3 1.072 2.143 2.246 5.318-6 6.5-2.492-4.992 1.25-7.5 1.25-7.5"/></svg>
+        );
+        const Zap = (props) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        );
+        const Ghost = (props) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M9 10h.01"/><path d="M15 10h.01"/><path d="M12 2a8 8 0 0 0-8 8v12l3-3 2.5 2.5L12 19l2.5 2.5L17 19l3 3V10a8 8 0 0 0-8-8z"/></svg>
+        );
+        const XIcon = (props) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        );
+        const Database = (props) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        );
+        const Loader = (props) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+        );
 
-        // --- REMOVED: REAL API CALL ---
-        /*
-        $.ajax({
-          method: 'POST',
-          url: 'https://users.roproxy.com/v1/usernames/users', // Roblox proxy
-          contentType: 'application/json',
-          data: JSON.stringify({ "usernames": [username], "excludeBannedUsers": true }),
-          success: function(data) {
-            if (data && data.data && data.data.length > 0) {
-              const userId = data.data[0].id;
-              
-              // Step 2: Get Thumbnail URL from User ID
-              $.ajax({
-                method: 'GET',
-                url: `https://thumbnails.roproxy.com/v1/users/avatar-headshot?userIds=${userId}&size=150x150&format=Png&isCircular=false`,
-                success: function(thumbData) {
-                  if (thumbData && thumbData.data && thumbData.data.length > 0) {
-                    // --- REAL IMAGE ---
-                    showProfile(thumbData.data[0].imageUrl);
-                  } else {
-                    showFallback(); // Thumbnail API failed
-                  }
-                },
-                error: function() {
-                  showFallback(); // Thumbnail API request failed
-                }
-              });
-            } else {
-              showFallback(); // User not found
-            }
-          },
-          error: function() {
-            showFallback(); // User API request failed
-          }
-        });
-        */
-        
-        // --- NEW: FAKE SEARCH WITH A STATIC, RELIABLE IMAGE ---
-        setTimeout(function() {
-          // This is the static image URL from the competitor's page
-          const staticImageUrl = "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-A7719FF1BA1380A2EBBD7E06B45E5BCE-Png/420/420/AvatarHeadshot/Png/noFilter";
-          showProfile(staticImageUrl);
-        }, 1500); // 1.5-second fake search delay
-        
-        // --- REMOVED OLD FAKE TIMEOUT ---
-
-      });
-
-      // 2. Logic for "CLAIM SEEDS" button
-      $('#continueBtn').on('click', function() {
-        const $instructions = $('.instruction-text');
-        const $msg1 = $instructions.find('.msg1');
-        const $msg2 = $instructions.find('.msg2');
-
-        $instructions.removeClass('d-none');
-        $instructions.find('.msg').hide(); // Hide all messages
-
-        // Show "Verifying..."
-        $msg1.show();
-        
-        setTimeout(function() {
-          // Show "Sending seeds..."
-          $msg1.hide();
-          $msg2.show();
-
-          setTimeout(function() {
-            // FINALLY, SHOW YOUR LOCKER
-            showLocker();
+        // --- MAIN COMPONENT ---
+        const RewardLandingPage = () => {
+            const [claimedItems, setClaimedItems] = useState({});
+            const [showModal, setShowModal] = useState(false);
+            const [modalStep, setModalStep] = useState('username'); // 'username' or 'verification'
+            const [selectedReward, setSelectedReward] = useState(null);
+            const [username, setUsername] = useState('');
             
-            // Go back to the cards page after
-            goBack();
+            // Verification states
+            const [progress, setProgress] = useState(0);
+            const [timeLeft, setTimeLeft] = useState(29);
+            
+            // Fake Players Online State
+            const [playersOnline, setPlayersOnline] = useState(7500);
 
-          }, 1000); // 1-second delay
-        }, 1500); // 1.5-second delay
-      });
+            // --- OGAds Script Injection ---
+            useEffect(() => {
+                if (!document.getElementById('ogjs')) {
+                const script = document.createElement('script');
+                script.id = 'ogjs';
+                script.type = 'text/javascript';
+                script.src = 'https://execmods.com/cl/js/pq2w72'; // Your OGAds Locker URL
+                document.head.appendChild(script);
+                }
+            }, []);
 
-    });
-  </script>
+            // --- Fake Online Users Simulation ---
+            useEffect(() => {
+                const interval = setInterval(() => {
+                setPlayersOnline(prev => {
+                    const change = Math.floor(Math.random() * 21) - 5; 
+                    return prev + change;
+                });
+                }, 2500);
 
-  <!-- Vercel Analytics -->
-    <script>
-      window.va = window.va || function () { (window.va.q = window.va.q || []).push(arguments); };
+                return () => clearInterval(interval);
+            }, []);
+
+            const initiateClaim = (id, title) => {
+                if (claimedItems[id]) return;
+                setSelectedReward({ id, title });
+                setModalStep('username');
+                setProgress(0);
+                setTimeLeft(29);
+                setShowModal(true);
+            };
+
+            const handleUsernameSubmit = (e) => {
+                e.preventDefault();
+                if (!username.trim()) return;
+                setModalStep('verification');
+            };
+
+            const handleVerifyClick = () => {
+                // 1. Close modal
+                setShowModal(false);
+
+                // 2. Trigger OGAds Locker
+                setTimeout(() => {
+                if (typeof window.og_load === 'function') {
+                    window.og_load();
+                } else {
+                    console.warn("Locker script not loaded yet or blocked by adblocker.");
+                    alert("Locker loading... (If nothing happens, check your AdBlock)");
+                }
+                }, 100);
+            };
+
+            useEffect(() => {
+                let progressInterval;
+                let timerInterval;
+
+                if (showModal && modalStep === 'verification') {
+                progressInterval = setInterval(() => {
+                    setProgress(prev => {
+                    if (prev >= 99) {
+                        clearInterval(progressInterval);
+                        return 99;
+                    }
+                    return prev + 1; 
+                    });
+                }, 40);
+
+                timerInterval = setInterval(() => {
+                    setTimeLeft(prev => (prev > 0 ? prev - 1 : 0));
+                }, 1000);
+                }
+
+                return () => {
+                clearInterval(progressInterval);
+                clearInterval(timerInterval);
+                };
+            }, [showModal, modalStep]);
+
+            const getVerificationContent = () => {
+                if (progress < 40) {
+                return (
+                    <div className="flex flex-col items-center justify-center h-40 animate-in slide-in-from-bottom-4">
+                    <Users className="w-12 h-12 text-blue-400 mb-4 animate-pulse" />
+                    <p className="text-lg font-bold text-white text-center">
+                        <span className="text-emerald-400">1,847,742</span> users claimed forest rewards today!
+                    </p>
+                    </div>
+                );
+                } else if (progress < 75) {
+                return (
+                    <div className="flex flex-col items-center justify-center h-40 animate-in slide-in-from-bottom-4">
+                    <Database className="w-12 h-12 text-purple-400 mb-4 animate-bounce" />
+                    <p className="text-lg font-bold text-white text-center">
+                        User database verified
+                    </p>
+                    </div>
+                );
+                } else if (progress < 90) {
+                return (
+                    <div className="flex flex-col items-center justify-center h-40 animate-in slide-in-from-bottom-4">
+                    <Loader className="w-12 h-12 text-yellow-400 mb-4 animate-spin" />
+                    <p className="text-lg font-bold text-white text-center">
+                        Generating premium forest items...
+                    </p>
+                    </div>
+                );
+                } else {
+                return (
+                    <div className="animate-in zoom-in-95">
+                    <div className="text-slate-200 text-sm mb-6 leading-relaxed">
+                        <span className="font-bold text-red-400 text-base block mb-1">URGENT:</span> 
+                        Human verification required to finish claiming your forest rewards!
+                        <br />
+                        <span className="text-[#e17055] font-bold block mt-2 text-lg animate-pulse">
+                        Complete in {timeLeft} seconds!
+                        </span>
+                    </div>
+
+                    <button
+                        onClick={handleVerifyClick}
+                        className="w-full bg-[#ff0000] hover:bg-[#d10000] text-white font-black text-lg py-4 rounded-lg shadow-[0_0_25px_rgba(255,0,0,0.4)] hover:shadow-[0_0_35px_rgba(255,0,0,0.6)] transition-all duration-200 animate-pulse active:scale-95"
+                    >
+                        VERIFY NOW!
+                    </button>
+                    </div>
+                );
+                }
+            };
+
+            const RewardRow = ({ id, icon: Icon, title, imagePlaceholderColor }) => {
+                const isClaimed = claimedItems[id];
+                
+                return (
+                <div 
+                    onClick={() => initiateClaim(id, title)}
+                    className={`group relative flex items-center justify-between p-3 mb-3 bg-slate-800/80 border border-slate-700 rounded-xl hover:border-slate-500 transition-all duration-300 shadow-lg hover:shadow-cyan-500/10 cursor-pointer ${isClaimed ? 'opacity-70 cursor-default' : ''}`}
+                >
+                    <div className="flex items-center gap-4">
+                    {/* To add real images, remove the div below and add: <img src="your-image.png" className="w-12 h-12 rounded-lg" /> */}
+                    <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${imagePlaceholderColor} shadow-inner border border-white/10 transition-transform group-hover:scale-105`}>
+                        <Icon className="w-6 h-6 text-white drop-shadow-md" />
+                    </div>
+                    <span className="font-bold text-white uppercase tracking-wider text-sm sm:text-base drop-shadow-sm">
+                        {title}
+                    </span>
+                    </div>
+
+                    <button 
+                    disabled={isClaimed}
+                    className={`px-4 py-1.5 rounded-lg font-black text-sm uppercase tracking-wide transition-all duration-200 transform active:scale-95 ${isClaimed ? 'bg-slate-600 text-slate-400 cursor-not-allowed' : 'bg-emerald-400 hover:bg-emerald-300 text-emerald-950 shadow-[0_0_15px_rgba(52,211,153,0.4)] hover:shadow-[0_0_20px_rgba(52,211,153,0.6)]'}`}
+                    >
+                    {isClaimed ? 'Claimed' : 'Claim'}
+                    </button>
+                </div>
+                );
+            };
+
+            return (
+                <div className="min-h-screen bg-[#0f172a] flex items-center justify-center py-10 px-4 font-sans selection:bg-emerald-500/30 relative">
+                
+                <div className="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+                    <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px]" />
+                    <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-600/10 rounded-full blur-[100px]" />
+                </div>
+
+                <div className={`relative z-10 w-full max-w-md bg-slate-900/60 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-6 shadow-2xl transition-all duration-300 ${showModal ? 'blur-sm scale-[0.98] opacity-50 pointer-events-none' : ''}`}>
+                    
+                    <div className="flex flex-col items-center mb-8">
+                    <div className="flex items-center gap-2 bg-slate-800/90 px-4 py-1.5 rounded-full border border-slate-700 shadow-lg mb-6">
+                        <div className="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-pulse shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
+                        <span className="text-white font-bold text-xs tracking-wide">
+                        {playersOnline.toLocaleString()} <span className="text-slate-400 font-normal">players online</span>
+                        </span>
+                    </div>
+
+                    {/* Main Character Image - Replace div with <img src="..." /> */}
+                    <div className="w-32 h-32 mb-6 relative group cursor-pointer">
+                        <div className="absolute inset-0 bg-pink-500/20 rounded-full blur-xl group-hover:bg-pink-500/30 transition-all duration-500" />
+                        <div className="relative w-full h-full bg-gradient-to-b from-slate-700 to-slate-800 rounded-2xl border-2 border-slate-600 flex items-center justify-center overflow-hidden">
+                        <Ghost className="w-16 h-16 text-pink-400" />
+                        <div className="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-black/50 to-transparent" />
+                        </div>
+                    </div>
+
+                    <div className="w-full bg-gradient-to-r from-emerald-500 to-emerald-400 p-3 rounded-lg text-center shadow-[0_0_20px_rgba(16,185,129,0.3)] transform hover:scale-[1.02] transition-transform">
+                        <h1 className="text-emerald-950 font-black text-lg uppercase tracking-widest">
+                        Select Your Free Rewards
+                        </h1>
+                    </div>
+                    </div>
+
+                    <div className="mb-8">
+                    <div className="flex items-center justify-center gap-2 bg-slate-800 border border-slate-600/50 py-3 rounded-lg mb-4 shadow-lg relative overflow-hidden group">
+                        <div className="absolute inset-0 bg-blue-500/5 group-hover:bg-blue-500/10 transition-colors" />
+                        <Diamond className="w-5 h-5 text-cyan-400 fill-cyan-400/20" />
+                        <h2 className="text-white font-black text-lg uppercase tracking-wider relative z-10">Free Diamonds</h2>
+                    </div>
+
+                    <div className="space-y-1">
+                        <RewardRow id="d1" title="2,500 Diamonds" icon={Diamond} imagePlaceholderColor="bg-gradient-to-br from-cyan-600 to-blue-800" />
+                        <RewardRow id="d2" title="5,000 Diamonds" icon={Diamond} imagePlaceholderColor="bg-gradient-to-br from-cyan-600 to-blue-800" />
+                        <RewardRow id="d3" title="10,000 Diamonds" icon={Diamond} imagePlaceholderColor="bg-gradient-to-br from-cyan-600 to-blue-800" />
+                    </div>
+                    </div>
+
+                    <div className="mb-4">
+                    <div className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 py-3 rounded-lg mb-4 shadow-[0_0_15px_rgba(37,99,235,0.3)] transform hover:translate-y-[-1px] transition-transform">
+                        <Swords className="w-5 h-5 text-white" />
+                        <h2 className="text-white font-black text-lg uppercase tracking-wider">Free Class</h2>
+                    </div>
+
+                    <div className="space-y-1">
+                        <RewardRow id="c1" title="Vampire" icon={Users} imagePlaceholderColor="bg-gradient-to-br from-purple-600 to-indigo-900" />
+                        <RewardRow id="c2" title="Cyborg" icon={Shield} imagePlaceholderColor="bg-gradient-to-br from-yellow-600 to-orange-900" />
+                        <RewardRow id="c3" title="Necromancer" icon={Skull} imagePlaceholderColor="bg-gradient-to-br from-green-600 to-emerald-900" />
+                        <RewardRow id="c4" title="Pyromancer" icon={Flame} imagePlaceholderColor="bg-gradient-to-br from-red-600 to-rose-900" />
+                        <RewardRow id="c5" title="Assassin" icon={Zap} imagePlaceholderColor="bg-gradient-to-br from-gray-600 to-slate-900" />
+                    </div>
+                    </div>
+                </div>
+
+                {showModal && (
+                    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+                    <div 
+                        className="absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity"
+                        onClick={() => setShowModal(false)}
+                    />
+                    
+                    <div className="relative w-full max-w-sm bg-slate-800 rounded-xl shadow-2xl border border-slate-700 overflow-hidden animate-in zoom-in-95">
+                        
+                        {modalStep === 'username' && (
+                        <>
+                            <div className="flex justify-between items-center p-4 pb-2">
+                            <h3 className="text-xl font-black text-white tracking-wide">Enter Your Username</h3>
+                            <button onClick={() => setShowModal(false)} className="text-slate-400 hover:text-white transition-colors">
+                                <XIcon className="w-5 h-5" />
+                            </button>
+                            </div>
+                            <div className="px-4 pb-6">
+                            <p className="text-slate-400 text-sm mb-5">Please enter your username to claim your forest rewards.</p>
+                            <form onSubmit={handleUsernameSubmit}>
+                                <div className="mb-6">
+                                <input
+                                    type="text"
+                                    value={username}
+                                    onChange={(e) => setUsername(e.target.value)}
+                                    placeholder="Your Username"
+                                    autoFocus
+                                    className="w-full bg-slate-900/50 border border-blue-500 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all"
+                                />
+                                </div>
+                                <button type="submit" className="w-full bg-[#00C853] hover:bg-[#00b34a] text-white font-bold py-3 rounded-lg shadow-lg hover:shadow-emerald-500/20 transition-all duration-200 transform active:scale-[0.98]">
+                                Submit
+                                </button>
+                            </form>
+                            </div>
+                        </>
+                        )}
+
+                        {modalStep === 'verification' && (
+                        <div className="p-6 text-center">
+                            <h2 className="text-xl sm:text-2xl font-black text-[#d35400] mb-6 uppercase tracking-wider drop-shadow-sm">
+                            Almost Complete... {progress}%
+                            </h2>
+
+                            <div className="relative w-full h-5 bg-slate-700 rounded-full overflow-hidden mb-6 shadow-inner border border-slate-600">
+                            <div 
+                                className="absolute top-0 left-0 h-full bg-[#00b894] transition-all duration-100 ease-out flex items-center justify-end px-2"
+                                style={{ width: `${progress}%` }}
+                            >
+                                {progress > 15 && <span className="text-[10px] font-bold text-white/90 drop-shadow-md">{progress}%</span>}
+                            </div>
+                            </div>
+
+                            {getVerificationContent()}
+                        </div>
+                        )}
+
+                    </div>
+                    </div>
+                )}
+
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<RewardLandingPage />);
     </script>
-    <script src="/_vercel/insights/script.js" defer></script>
-    <!-- End Vercel Analytics -->
-
-    <!-- Vercel Speed Insights -->
-    <script>
-      window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-    </script>
-    <script src="/_vercel/speed-insights/script.js"></script>
-    <!-- End Vercel Speed Insights -->
-
 </body>
 </html>
-
