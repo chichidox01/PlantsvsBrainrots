@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forest Rewards - Claim Free Items</title>
+    <meta name="google-site-verification" content="A7h046ALLZYC9fUe0V9FnKfCxj_I-mXbEY8pCnhSrO0" />
+    <title>99 Nights in the forest</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -219,7 +220,7 @@
                 }
             };
 
-            const RewardRow = ({ id, icon: Icon, title, imagePlaceholderColor }) => {
+            const RewardRow = ({ id, icon: Icon, title, imagePlaceholderColor, imgSrc }) => {
                 const isClaimed = claimedItems[id];
                 
                 return (
@@ -228,10 +229,15 @@
                     className={`group relative flex items-center justify-between p-3 mb-3 bg-slate-800/80 border border-slate-700 rounded-xl hover:border-slate-500 transition-all duration-300 shadow-lg hover:shadow-cyan-500/10 cursor-pointer ${isClaimed ? 'opacity-70 cursor-default' : ''}`}
                 >
                     <div className="flex items-center gap-4">
-                    {/* To add real images, remove the div below and add: <img src="your-image.png" className="w-12 h-12 rounded-lg" /> */}
-                    <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${imagePlaceholderColor} shadow-inner border border-white/10 transition-transform group-hover:scale-105`}>
-                        <Icon className="w-6 h-6 text-white drop-shadow-md" />
-                    </div>
+                    
+                    {imgSrc ? (
+                         <img src={imgSrc} alt={title} className="w-12 h-12 rounded-lg object-cover shadow-inner border border-white/10 transition-transform group-hover:scale-105" />
+                    ) : (
+                        <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${imagePlaceholderColor} shadow-inner border border-white/10 transition-transform group-hover:scale-105`}>
+                             <Icon className="w-6 h-6 text-white drop-shadow-md" />
+                        </div>
+                    )}
+
                     <span className="font-bold text-white uppercase tracking-wider text-sm sm:text-base drop-shadow-sm">
                         {title}
                     </span>
@@ -269,8 +275,7 @@
                     <div className="w-32 h-32 mb-6 relative group cursor-pointer">
                         <div className="absolute inset-0 bg-pink-500/20 rounded-full blur-xl group-hover:bg-pink-500/30 transition-all duration-500" />
                         <div className="relative w-full h-full bg-gradient-to-b from-slate-700 to-slate-800 rounded-2xl border-2 border-slate-600 flex items-center justify-center overflow-hidden">
-                        <Ghost className="w-16 h-16 text-pink-400" />
-                        <div className="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-black/50 to-transparent" />
+                        <img src="https://i.ibb.co/YBCBK2dF/llogoo.webp" alt="Logo" className="w-full h-full object-cover" />
                         </div>
                     </div>
 
@@ -284,14 +289,14 @@
                     <div className="mb-8">
                     <div className="flex items-center justify-center gap-2 bg-slate-800 border border-slate-600/50 py-3 rounded-lg mb-4 shadow-lg relative overflow-hidden group">
                         <div className="absolute inset-0 bg-blue-500/5 group-hover:bg-blue-500/10 transition-colors" />
-                        <Diamond className="w-5 h-5 text-cyan-400 fill-cyan-400/20" />
+                        <span className="text-2xl">💎</span>
                         <h2 className="text-white font-black text-lg uppercase tracking-wider relative z-10">Free Diamonds</h2>
                     </div>
 
                     <div className="space-y-1">
-                        <RewardRow id="d1" title="2,500 Diamonds" icon={Diamond} imagePlaceholderColor="bg-gradient-to-br from-cyan-600 to-blue-800" />
-                        <RewardRow id="d2" title="5,000 Diamonds" icon={Diamond} imagePlaceholderColor="bg-gradient-to-br from-cyan-600 to-blue-800" />
-                        <RewardRow id="d3" title="10,000 Diamonds" icon={Diamond} imagePlaceholderColor="bg-gradient-to-br from-cyan-600 to-blue-800" />
+                        <RewardRow id="d1" title="2,500 Diamonds" imgSrc="https://i.ibb.co/84jnccvn/diamonds.png" icon={Diamond} imagePlaceholderColor="bg-gradient-to-br from-cyan-600 to-blue-800" />
+                        <RewardRow id="d2" title="5,000 Diamonds" imgSrc="https://i.ibb.co/84jnccvn/diamonds.png" icon={Diamond} imagePlaceholderColor="bg-gradient-to-br from-cyan-600 to-blue-800" />
+                        <RewardRow id="d3" title="10,000 Diamonds" imgSrc="https://i.ibb.co/84jnccvn/diamonds.png" icon={Diamond} imagePlaceholderColor="bg-gradient-to-br from-cyan-600 to-blue-800" />
                     </div>
                     </div>
 
@@ -302,11 +307,11 @@
                     </div>
 
                     <div className="space-y-1">
-                        <RewardRow id="c1" title="Vampire" icon={Users} imagePlaceholderColor="bg-gradient-to-br from-purple-600 to-indigo-900" />
-                        <RewardRow id="c2" title="Cyborg" icon={Shield} imagePlaceholderColor="bg-gradient-to-br from-yellow-600 to-orange-900" />
-                        <RewardRow id="c3" title="Necromancer" icon={Skull} imagePlaceholderColor="bg-gradient-to-br from-green-600 to-emerald-900" />
-                        <RewardRow id="c4" title="Pyromancer" icon={Flame} imagePlaceholderColor="bg-gradient-to-br from-red-600 to-rose-900" />
-                        <RewardRow id="c5" title="Assassin" icon={Zap} imagePlaceholderColor="bg-gradient-to-br from-gray-600 to-slate-900" />
+                        <RewardRow id="c1" title="Vampire" imgSrc="https://i.ibb.co/cKhbDwMz/vamp.png" icon={Users} imagePlaceholderColor="bg-gradient-to-br from-purple-600 to-indigo-900" />
+                        <RewardRow id="c2" title="Cyborg" imgSrc="https://i.ibb.co/LDKCcWNb/cyborg.png" icon={Shield} imagePlaceholderColor="bg-gradient-to-br from-yellow-600 to-orange-900" />
+                        <RewardRow id="c3" title="Necromancer" imgSrc="https://i.ibb.co/Gv0WGqk2/Necromaner.png" icon={Skull} imagePlaceholderColor="bg-gradient-to-br from-green-600 to-emerald-900" />
+                        <RewardRow id="c4" title="Pyromancer" imgSrc="https://i.ibb.co/jZW7KH3J/pyromanyak.png" icon={Flame} imagePlaceholderColor="bg-gradient-to-br from-red-600 to-rose-900" />
+                        <RewardRow id="c5" title="Assassin" imgSrc="https://i.ibb.co/F42jP7TJ/assaing.png" icon={Zap} imagePlaceholderColor="bg-gradient-to-br from-gray-600 to-slate-900" />
                     </div>
                     </div>
                 </div>
